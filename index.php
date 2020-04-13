@@ -1,3 +1,7 @@
+<?php
+    session_start();
+
+?>
 
 <html>
   <head>
@@ -5,28 +9,17 @@
     <title>App Help Desk</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <style>
-      .card-login {
-        padding: 30px 0 0 0;
-        width: 350px;
-        margin: 0 auto;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
+  
   </head>
 
   <body>
 
-    <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">
-        <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        App Help Desk
-      </a>
-    </nav>
+  <?php include_once "navbar_index.php" ?>
 
     <div class="container">    
       <div class="row">
-
+          
         <div class="card-login">
           <div class="card">
             <div class="card-header">
@@ -45,7 +38,15 @@
                
 
                 <?php endif ?>
-                
+
+                <?php if( isset($_GET['login']) && isset($_GET['login']) == 'erro2' ) : ?>
+
+                      <div class="alert alert-danger" role="alert">
+
+                          ATENÇÂO!! Autentique-se antes para ser autorizado a utilizar as outras páginas!!
+                      </div>
+
+                <?php endif ?>
               <form action="valida_login.php" method="POST">
                 <div class="form-group">
                   <input name="email" type="email" class="form-control"  placeholder="E-mail">

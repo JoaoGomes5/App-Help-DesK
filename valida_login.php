@@ -1,7 +1,13 @@
 <?php
+
+    session_start();
+
+
+
+
     //variavel que verifica se a autenticação foi realizada
     $user_aut = false;
-    
+
     //users do sistema sem bd
 
     $users_app = array(
@@ -27,9 +33,17 @@
     }
 
     if($user_aut){
+
         echo 'User authenticated';
+        
+        $_SESSION['authenticated'] = 'SIM';
+        $_SESSION['x'] = 'valor x';
+        $_SESSION['y'] = 'valor y';
+        header('Location: home.php');
+
     }  else {
-        header('Location: index.php?login=erro');
+        $_SESSION['authenticated'] = 'Não';
+        header('Location: index.php?login=erro2');
     }
     
   

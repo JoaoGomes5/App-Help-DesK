@@ -1,0 +1,3 @@
+Erro de impressão#Impressora#Erro ao imprimir em A4
+Pc não liga#Hardware#Erro ao ligar o pc, fica tudo azul
+Erro no Windows#Software#quando ligo o pc, o windows nao carrega
