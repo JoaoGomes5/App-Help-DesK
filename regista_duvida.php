@@ -1,7 +1,6 @@
 <?php
-    echo "<pre>";
-    print_r($_POST);
-    echo "<pre>";
+
+    session_start();
 
     //montagem do texto
     $titulo = str_replace( '#', '-' , $_POST['titulo']);
@@ -10,10 +9,10 @@
 
     //implode ('#' , $_POST);
     
-    $text = $titulo . '#' .  $categoria . '#' . $descricao . PHP_EOL;//php end of line
+    $text = $_SESSION['id'] . '#' . $titulo . '#' .  $categoria . '#' . $descricao . PHP_EOL;//php end of line
 
     //abre o aquivo
-    $arquivo = fopen('arquivo.txt' , 'a');
+    $arquivo = fopen('../../app_help_desk/arquivo.txt' , 'a');
     //escrever no arquivo
     fwrite($arquivo , $text);
     //fechar o arquivo

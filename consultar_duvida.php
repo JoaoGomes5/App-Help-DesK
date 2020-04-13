@@ -6,7 +6,7 @@
   $duvidas = array();
   //abrir o arquivo
 
-  $arquivo = fopen('arquivo.txt' , 'r');
+  $arquivo = fopen('../../app_help_desk/arquivo.txt' , 'r');
 
   //enquanto hover registos ou linhas a ser recuperados
   while(!feof($arquivo)){//testa pelo fim do arquivo até ao end of file e reposiciona o corsor no ficheiro
@@ -52,30 +52,49 @@
         <div class="card-consultar-chamado">
           <div class="card">
             <div class="card-header">
-              Consulta de chamado
+           
+                <h4>Consulta das Dúdidas</h4>
+            
             </div>
             
             <div class="card-body">
               
+                              
+              
               <?php foreach($duvidas as $duvida) : ?>
 
-                  <!-- <?= $duvida . '<br />'; ?> -->
-
+               
                   <?php
+                       
 
                         $duvida_dados = explode('#' , $duvida);
+                        
+                      
+
+
+                        if($_SESSION['profile_id'] == 2){
+                          //só vou exibir a duvida que foi criada pelo user
+                          if($_SESSION['id'] != $duvida_dados[0]){
+                            continue;
+                          }
+                        }
 
                         if(count($duvida_dados) < 3){
                           continue;
                         }
+
+
                         
                   ?>
                   <div class="card mb-3 bg-light">
+                    <div class="card-header">
+                    <h5>ID do Utilizador <span class="badge badge-primary"><?=$duvida_dados[0]; ?></span></h6>
+                  </div>
                     <div class="card-body">
 
-                      <h5 class="card-title"><?=$duvida_dados[0]; ?> </h5>
-                      <h6 class="card-subtitle mb-2 text-muted"><?= $duvida_dados[1]; ?></h6>
-                      <p class="card-text"><?=$duvida_dados[2]; ?></p>
+                      <h6 class="card-title"><?=$duvida_dados[1]; ?> </h5>
+                      <h7 class="card-subtitle mb-2 text-muted"><?= $duvida_dados[2]; ?></h7>
+                      <p class="card-text"><?=$duvida_dados[3]; ?></p>
 
                       
                     </div>
