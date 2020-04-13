@@ -49,7 +49,7 @@
                 <?php endif ?>
               <form action="valida_login.php" method="POST">
                 <div class="form-group">
-                  <input name="email" type="email" class="form-control"  placeholder="E-mail">
+                  <input name="email" type="email" class="form-control"  placeholder="E-Mail">
                 </div>
                 <div class="form-group">
                   <input name="password" type="password" class="form-control"  placeholder="Password">
