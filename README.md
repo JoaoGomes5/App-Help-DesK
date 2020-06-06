@@ -14,7 +14,7 @@
 
 
 ## Technologies
-# Going into more detail on code and technologies used
+# Going into more detail on code and technologies used integrated with email API
 
 - PHP
 <a href="https://www.php.net/" target="_blank">`PHP Website`</a>.
