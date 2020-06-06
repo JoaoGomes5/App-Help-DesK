@@ -1,4 +1,4 @@
-<img src="logo.png" title="Image" alt="ProjectImage">
+<img src="logo.png" title="Image" alt="ProjectImage" width="150"  height="150" >
 
 # help Desk
 
