@@ -10,11 +10,11 @@
 
 # Objective
 
->The objective of this project was to learn a PHP and OO
+>The objective of this project was to learn a PHP and OO integrated with email API
 
 
 ## Technologies
-# Going into more detail on code and technologies used integrated with email API
+# Going into more detail on code and technologies used
 
 - PHP
 <a href="https://www.php.net/" target="_blank">`PHP Website`</a>.
