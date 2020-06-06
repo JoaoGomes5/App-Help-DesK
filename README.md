@@ -2,15 +2,11 @@
 
 # App Help Desk
 
-> A simple application where we can send emails
-
-# Layout Demonstration - Web
-
-![Recordit GIF](https://recordit.co/eIYVfxKqed.gif)
+> A simple application where we can ask questions and view them
 
 # Objective
 
->The objective of this project was to learn a PHP and OO integrated with email API
+>The objective of this project was to learn a PHP 
 
 
 ## Technologies
@@ -21,7 +17,7 @@
 
 ### Clone
 
-- Clone this repo to your local machine using <git clone `https://github.com/JoaoGomes5/ERecolha-NLW-RocketSeat`>
+- Clone this repo to your local machine using <git clone `https://github.com/JoaoGomes5/App-Help-DesK`>
 
 ## Support
 
